@@ -1,0 +1,72 @@
+---
+title: "weca_data_story"
+format:
+  closeread-html:
+    cr-style:
+      narrative-background-color-overlay: white
+      section-background-color: white
+---
+
+:::{.cr-section}
+
+Put some text here. @cr-myplot
+
+More text can go here. We want to zoom here. [@cr-myplot]{pan-to="50%,50%" scale-by="1.5"}
+
+Even more text. [@cr-myplot]{pan-to="-25%,80%" scale-by="2"}
+
+:::{#cr-myplot}
+
+```{dot}
+#map goes here
+
+
+graph A {
+node [
+        shape = oval
+        style = filled
+        fontname="Helvetica,Arial,sans-serif"
+        fontsize = 20
+    ]
+    layout = twopi
+    root = "center"
+    overlap = false 
+    margin = 0
+
+    center -- {a b c d e};
+    
+    a -- {a1 a2};
+    b -- {b1 b2 b3};
+    c -- {c1 c2 c3};
+    d -- {d1};
+    e -- {e1};
+    
+    a2 -- {aa1 aa2};
+
+    center[label = "Central\nIdea" fillcolor = "#440154FF" fontcolor = white];
+    a[label = "Branch 1" fillcolor = "#414487FF" fontcolor = white];
+    b[label = "Branch 2" fillcolor = "#414487FF" fontcolor = white];
+    c[label = "Branch 3" fillcolor = "#414487FF" fontcolor = white];
+    d[label = "Branch 4" fillcolor = "#414487FF" fontcolor = white];
+    e[label = "Branch 5" fillcolor = "#414487FF" fontcolor = white];
+    a1[label = "Sub-Branch 1" fillcolor = "#22A884FF"];
+    a2[label = "Sub-Branch 2" fillcolor = "#22A884FF"];
+    b1[label = "Sub-Branch 3" fillcolor = "#22A884FF"];
+    b2[label = "Sub-Branch 4" fillcolor = "#22A884FF"];
+    b3[label = "Sub-Branch 5" fillcolor = "#22A884FF"];
+    c1[label = "Sub-Branch 6" fillcolor = "#22A884FF"];
+    c2[label = "Sub-Branch 7" fillcolor = "#22A884FF"];
+    c3[label = "Sub-Branch 8" fillcolor = "#22A884FF"];
+    d1[label = "Sub-Branch 9" fillcolor = "#22A884FF"];
+    e1[label = "Sub-Branch 10" fillcolor = "#22A884FF"];
+    aa1[label = "More\nIdeas 1" fillcolor = "#7AD151FF"];
+    aa2[label = "More\nIdeas 2" fillcolor = "#7AD151FF"]; 
+
+    
+}
+
+```
+
+:::
+
+:::
